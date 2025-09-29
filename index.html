@@ -28,12 +28,15 @@
       font-size: 22px; 
       color: #2e7d32; 
     }
-    img { 
+    #foodImage { 
       margin-top: 20px; 
-      width: 220px; 
-      height: 220px; 
+      width: 250px; 
+      height: auto; 
       border-radius: 15px; 
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
@@ -42,18 +45,18 @@
   <p>Can’t decide what to eat? Let me choose for you 😎</p>
   <button onclick="suggestFood()">Suggest Food</button>
   <div id="suggestion"></div>
-  <img id="foodImage" src="" alt="" style="display:none;">
+  <img id="foodImage" src="" alt="Food Image" style="display:none;">
 
   <script>
     const foods = [
-      { text: "🍕 Pizza – because salad is just crunchy sadness.", img: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg" },
-      { text: "🍔 Burger – happiness between two buns.", img: "https://upload.wikimedia.org/wikipedia/commons/0/0b/RedDot_Burger.jpg" },
-      { text: "🍜 Noodles – the slurp of champions.", img: "https://upload.wikimedia.org/wikipedia/commons/2/28/Shrimp_noodle_soup.jpg" },
-      { text: "🥗 Salad – just kidding, order fries.", img: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Salad_platter.jpg" },
-      { text: "🍩 Donuts – because abs are overrated.", img: "https://upload.wikimedia.org/wikipedia/commons/8/81/Glazed-Donut.jpg" },
-      { text: "🍦 Ice Cream – therapy but colder.", img: "https://upload.wikimedia.org/wikipedia/commons/0/09/Strawberry_ice_cream_cone_%28cropped%29.jpg" },
-      { text: "🌮 Tacos – fold happiness in half.", img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Taco_with_meat%2C_cheese%2C_lettuce%2C_and_tomato.jpg" },
-      { text: "🍿 Popcorn – perfect for eating while doing absolutely nothing.", img: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Popcorn_in_a_bowl.jpg" }
+      { text: "🍕 Pizza – because salad is just crunchy sadness.", img: "https://static.wikia.nocookie.net/recipes/images/2/2f/Pizza.jpg" },
+      { text: "🍔 Burger – happiness between two buns.", img: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Burger_%28black_bg%29.jpg" },
+      { text: "🍜 Noodles – the slurp of champions.", img: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Asian_noodles.jpg" },
+      { text: "🥗 Salad – just kidding, order fries.", img: "https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg" },
+      { text: "🍩 Donuts – because abs are overrated.", img: "https://upload.wikimedia.org/wikipedia/commons/f/fc/Donuts_%282%29.jpg" },
+      { text: "🍦 Ice Cream – therapy but colder.", img: "https://upload.wikimedia.org/wikipedia/commons/1/10/IceCream.jpg" },
+      { text: "🌮 Tacos – fold happiness in half.", img: "https://upload.wikimedia.org/wikipedia/commons/1/11/Taco_2018.jpg" },
+      { text: "🍿 Popcorn – perfect for eating while doing absolutely nothing.", img: "https://upload.wikimedia.org/wikipedia/commons/7/70/Popcorn.JPG" }
     ];
 
     function suggestFood() {
